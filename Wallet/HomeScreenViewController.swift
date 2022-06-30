@@ -67,20 +67,26 @@ class HomeScreenViewController: UIViewController {
         
         alert.addAction(UIAlertAction(title: "Add Account",
                                       style: .default) { _ in
-//            let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "profileVC") as! ProfileViewController
-//            self.present(nextViewController, animated: true)
+            let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "addAccountVC") as! AddAccountViewController
+            self.present(nextViewController, animated: true)
         })
 
         alert.addAction(UIAlertAction(title: "Currency Converter",
                                       style: .default) { _ in
-//            let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "profileVC") as! ProfileViewController
-//            self.present(nextViewController, animated: true)
+            let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "currencyConverterVC") as! CurrencyConverterViewController
+            self.present(nextViewController, animated: true)
         })
         
         alert.addAction(UIAlertAction(title: "Settings",
                                       style: .default) { _ in
-//            let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "eventsVC") as! ListEventsViewController
-//            self.present(nextViewController, animated: true)
+            let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "settingsVC") as! SettingsViewController
+            self.present(nextViewController, animated: true)
+        })
+        
+        alert.addAction(UIAlertAction(title: "About",
+                                      style: .default) { _ in
+            let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "aboutVC") as! AboutViewController
+            self.present(nextViewController, animated: true)
         })
 
         alert.addAction(UIAlertAction(title: "Logout",

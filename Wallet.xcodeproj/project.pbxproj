@@ -12,6 +12,9 @@
 		380177C12831B4E1003D3504 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 380177BF2831B4E1003D3504 /* Main.storyboard */; };
 		380177C32831B4E2003D3504 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 380177C22831B4E2003D3504 /* Assets.xcassets */; };
 		380177C62831B4E2003D3504 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 380177C42831B4E2003D3504 /* LaunchScreen.storyboard */; };
+		3869B14D286E37E100A4C93B /* CurrencyConverterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3869B14C286E37E100A4C93B /* CurrencyConverterViewController.swift */; };
+		3869B14F286E38C000A4C93B /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3869B14E286E38C000A4C93B /* AboutViewController.swift */; };
+		3869B151286E395B00A4C93B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3869B150286E395B00A4C93B /* SettingsViewController.swift */; };
 		38F869AE286D483300863466 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F869AD286D483300863466 /* RootViewController.swift */; };
 		38F869B0286D497E00863466 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F869AF286D497E00863466 /* SignUpViewController.swift */; };
 		38F869B2286D49F000863466 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38F869B1286D49F000863466 /* GoogleService-Info.plist */; };
@@ -36,6 +39,9 @@
 		380177C22831B4E2003D3504 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		380177C52831B4E2003D3504 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		380177C72831B4E2003D3504 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3869B14C286E37E100A4C93B /* CurrencyConverterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverterViewController.swift; sourceTree = "<group>"; };
+		3869B14E286E38C000A4C93B /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		3869B150286E395B00A4C93B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		38F869AD286D483300863466 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		38F869AF286D497E00863466 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		38F869B1286D49F000863466 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -88,6 +94,9 @@
 				38F869C8286D6F6E00863466 /* SideMenuCell.swift */,
 				38F869C9286D6F6E00863466 /* SideMenuCell.xib */,
 				380177BF2831B4E1003D3504 /* Main.storyboard */,
+				3869B150286E395B00A4C93B /* SettingsViewController.swift */,
+				3869B14E286E38C000A4C93B /* AboutViewController.swift */,
+				3869B14C286E37E100A4C93B /* CurrencyConverterViewController.swift */,
 				38F869C4286D6E5F00863466 /* SideMenuModel.swift */,
 				38F869C2286D6D4700863466 /* SideMenuViewController.swift */,
 				38F869C0286D687A00863466 /* AddAccountViewController.swift */,
@@ -188,10 +197,13 @@
 				38F869CA286D6F6E00863466 /* SideMenuCell.swift in Sources */,
 				380177BA2831B4E1003D3504 /* AppDelegate.swift in Sources */,
 				38F869C1286D687B00863466 /* AddAccountViewController.swift in Sources */,
+				3869B14D286E37E100A4C93B /* CurrencyConverterViewController.swift in Sources */,
 				38F869AE286D483300863466 /* RootViewController.swift in Sources */,
+				3869B14F286E38C000A4C93B /* AboutViewController.swift in Sources */,
 				38F869C5286D6E5F00863466 /* SideMenuModel.swift in Sources */,
 				38F869B0286D497E00863466 /* SignUpViewController.swift in Sources */,
 				38F869BD286D4A9E00863466 /* LoginViewController.swift in Sources */,
+				3869B151286E395B00A4C93B /* SettingsViewController.swift in Sources */,
 				380177BC2831B4E1003D3504 /* SceneDelegate.swift in Sources */,
 				38F869BF286D4B9E00863466 /* HomeScreenViewController.swift in Sources */,
 			);
