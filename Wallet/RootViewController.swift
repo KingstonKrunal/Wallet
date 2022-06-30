@@ -13,7 +13,7 @@ class RootViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.view.backgroundColor = #colorLiteral(red: 0.737254902, green: 0.1294117647, blue: 0.2941176471, alpha: 1)
         
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         

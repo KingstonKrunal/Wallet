@@ -21,6 +21,11 @@
 		38F869BB286D4A6400863466 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 38F869BA286D4A6400863466 /* FirebaseStorage */; };
 		38F869BD286D4A9E00863466 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F869BC286D4A9E00863466 /* LoginViewController.swift */; };
 		38F869BF286D4B9E00863466 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F869BE286D4B9E00863466 /* HomeScreenViewController.swift */; };
+		38F869C1286D687B00863466 /* AddAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F869C0286D687A00863466 /* AddAccountViewController.swift */; };
+		38F869C3286D6D4700863466 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F869C2286D6D4700863466 /* SideMenuViewController.swift */; };
+		38F869C5286D6E5F00863466 /* SideMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F869C4286D6E5F00863466 /* SideMenuModel.swift */; };
+		38F869CA286D6F6E00863466 /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F869C8286D6F6E00863466 /* SideMenuCell.swift */; };
+		38F869CB286D6F6E00863466 /* SideMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38F869C9286D6F6E00863466 /* SideMenuCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +41,11 @@
 		38F869B1286D49F000863466 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		38F869BC286D4A9E00863466 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		38F869BE286D4B9E00863466 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
+		38F869C0286D687A00863466 /* AddAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountViewController.swift; sourceTree = "<group>"; };
+		38F869C2286D6D4700863466 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		38F869C4286D6E5F00863466 /* SideMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuModel.swift; sourceTree = "<group>"; };
+		38F869C8286D6F6E00863466 /* SideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuCell.swift; sourceTree = "<group>"; };
+		38F869C9286D6F6E00863466 /* SideMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +85,12 @@
 				380177B92831B4E1003D3504 /* AppDelegate.swift */,
 				380177BB2831B4E1003D3504 /* SceneDelegate.swift */,
 				38F869AD286D483300863466 /* RootViewController.swift */,
+				38F869C8286D6F6E00863466 /* SideMenuCell.swift */,
+				38F869C9286D6F6E00863466 /* SideMenuCell.xib */,
 				380177BF2831B4E1003D3504 /* Main.storyboard */,
+				38F869C4286D6E5F00863466 /* SideMenuModel.swift */,
+				38F869C2286D6D4700863466 /* SideMenuViewController.swift */,
+				38F869C0286D687A00863466 /* AddAccountViewController.swift */,
 				38F869BE286D4B9E00863466 /* HomeScreenViewController.swift */,
 				38F869BC286D4A9E00863466 /* LoginViewController.swift */,
 				38F869AF286D497E00863466 /* SignUpViewController.swift */,
@@ -157,6 +172,7 @@
 				380177C62831B4E2003D3504 /* LaunchScreen.storyboard in Resources */,
 				38F869B2286D49F000863466 /* GoogleService-Info.plist in Resources */,
 				380177C32831B4E2003D3504 /* Assets.xcassets in Resources */,
+				38F869CB286D6F6E00863466 /* SideMenuCell.xib in Resources */,
 				380177C12831B4E1003D3504 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,8 +184,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38F869C3286D6D4700863466 /* SideMenuViewController.swift in Sources */,
+				38F869CA286D6F6E00863466 /* SideMenuCell.swift in Sources */,
 				380177BA2831B4E1003D3504 /* AppDelegate.swift in Sources */,
+				38F869C1286D687B00863466 /* AddAccountViewController.swift in Sources */,
 				38F869AE286D483300863466 /* RootViewController.swift in Sources */,
+				38F869C5286D6E5F00863466 /* SideMenuModel.swift in Sources */,
 				38F869B0286D497E00863466 /* SignUpViewController.swift in Sources */,
 				38F869BD286D4A9E00863466 /* LoginViewController.swift in Sources */,
 				380177BC2831B4E1003D3504 /* SceneDelegate.swift in Sources */,
@@ -320,6 +340,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6C437AY5G2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Wallet/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -347,6 +368,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6C437AY5G2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Wallet/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
