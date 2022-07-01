@@ -7,9 +7,20 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 
-class HomeScreenViewController: UIViewController {
+class Event {
+    let accountName: String
+    let currentBalance: String
     
+    internal init(accountName: String, currentBalance: String) {
+        self.accountName = accountName
+        self.currentBalance = currentBalance
+    }
+}
+
+class HomeScreenViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+      
     private var sideMenuViewController: SideMenuViewController!
     private var sideMenuRevealWidth: CGFloat = 260
     private let paddingForRotation: CGFloat = 150
@@ -20,11 +31,17 @@ class HomeScreenViewController: UIViewController {
 
     private var revealSideMenuOnTop: Bool = true
 
+    @IBOutlet weak var accountsTV: UITableView!
+    
+    var events = [Event]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        self.view.backgroundColor = #colorLiteral(red: 0.737254902, green: 0.1294117647, blue: 0.2941176471, alpha: 1)
-
+        accountsTV.delegate = self
+        accountsTV.dataSource = self
+        
+        fetchEvents()
         
         // Side Menu
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
@@ -54,9 +71,45 @@ class HomeScreenViewController: UIViewController {
 //        showViewController(viewController: UINavigationController.self, storyboardId: "homeScreenVC")
     }
     
-    @IBAction func addAccount(_ sender: UIButton) {
-        let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "addAccountVC") as! AddAccountViewController
-        self.present(nextViewController, animated: true)
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return events.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "accountCell") as! AccountTableViewCell
+        
+        let event = events[indexPath.row]
+        cell.fillCell(accountName: event.accountName, currentBalance: event.currentBalance)
+        
+        return cell
+    }
+    
+    func fetchEvents() {
+        let db = Firestore.firestore()
+        db.collection("accounts").addSnapshotListener { documentSnapshot, err in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                    self.errorAlert(title: "Error plotting events", error: err.localizedDescription)
+                } else {
+                    self.events.removeAll()
+                    
+                    for document in documentSnapshot!.documents {
+                        let account = document.data()
+                        
+                        let aName = "\(account["account_name"] ?? "") \(account["account_type"] ?? "")"
+                        let cBalance = "$\(account["current_balance"] ?? "NIL")"
+                        
+                        print("here!!! \(account)")
+                        
+                        self.events.append(Event(
+                            accountName: aName,
+                            currentBalance: cBalance
+                        ))
+                    }
+                    
+                    self.accountsTV.reloadData()
+                }
+        }
     }
     
     
@@ -108,20 +161,6 @@ class HomeScreenViewController: UIViewController {
                                       style: .cancel))
 
         self.present(alert, animated: true)
-    }
-    
-    @IBAction func logout(_ sender: UIButton) {
-        let firebaseAuth = Auth.auth()
-        do {
-            try firebaseAuth.signOut()
-            
-            // Go to login view
-            let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "loginVC") as! LoginViewController
-            nextViewController.modalPresentationStyle = .fullScreen
-            self.present(nextViewController, animated: true)
-        } catch let signOutError as NSError {
-            self.errorAlert(title: "Error signing out", error: signOutError.localizedDescription)
-        }
     }
     
     func errorAlert(title: String, error: String) {
