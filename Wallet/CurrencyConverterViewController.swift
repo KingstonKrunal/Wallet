@@ -112,7 +112,7 @@ class CurrencyConverterViewController: UIViewController {
             self.toCountryButton.setTitle("NZD", for: .normal)
         })
         currencyMenu.addAction(UIAlertAction(title: "USD", style: .default) { _ in
-            self.fromCountryButton.setTitle("USD", for: .normal)
+            self.toCountryButton.setTitle("USD", for: .normal)
         })
 
         currencyMenu.addAction(UIAlertAction(title: "Cancel", style: .cancel))

@@ -12,6 +12,11 @@
 		380177C12831B4E1003D3504 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 380177BF2831B4E1003D3504 /* Main.storyboard */; };
 		380177C32831B4E2003D3504 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 380177C22831B4E2003D3504 /* Assets.xcassets */; };
 		380177C62831B4E2003D3504 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 380177C42831B4E2003D3504 /* LaunchScreen.storyboard */; };
+		3822A6D228A9B4FF002C1598 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3822A6D128A9B4FF002C1598 /* ProfileViewController.swift */; };
+		3822A6D428A9B51A002C1598 /* DevelopersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3822A6D328A9B51A002C1598 /* DevelopersViewController.swift */; };
+		3822A6D628A9BE5E002C1598 /* AccountDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3822A6D528A9BE5E002C1598 /* AccountDetailsViewController.swift */; };
+		3822A6D828A9C0F3002C1598 /* IncomeExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3822A6D728A9C0F3002C1598 /* IncomeExpenseViewController.swift */; };
+		3822A6DA28A9E1E3002C1598 /* IncomeExpenseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3822A6D928A9E1E3002C1598 /* IncomeExpenseTableViewCell.swift */; };
 		3869B14D286E37E100A4C93B /* CurrencyConverterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3869B14C286E37E100A4C93B /* CurrencyConverterViewController.swift */; };
 		3869B14F286E38C000A4C93B /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3869B14E286E38C000A4C93B /* AboutViewController.swift */; };
 		3869B151286E395B00A4C93B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3869B150286E395B00A4C93B /* SettingsViewController.swift */; };
@@ -40,6 +45,11 @@
 		380177C22831B4E2003D3504 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		380177C52831B4E2003D3504 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		380177C72831B4E2003D3504 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3822A6D128A9B4FF002C1598 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		3822A6D328A9B51A002C1598 /* DevelopersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopersViewController.swift; sourceTree = "<group>"; };
+		3822A6D528A9BE5E002C1598 /* AccountDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailsViewController.swift; sourceTree = "<group>"; };
+		3822A6D728A9C0F3002C1598 /* IncomeExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeExpenseViewController.swift; sourceTree = "<group>"; };
+		3822A6D928A9E1E3002C1598 /* IncomeExpenseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeExpenseTableViewCell.swift; sourceTree = "<group>"; };
 		3869B14C286E37E100A4C93B /* CurrencyConverterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverterViewController.swift; sourceTree = "<group>"; };
 		3869B14E286E38C000A4C93B /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		3869B150286E395B00A4C93B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -101,7 +111,12 @@
 				380177C42831B4E2003D3504 /* LaunchScreen.storyboard */,
 				38F869BC286D4A9E00863466 /* LoginViewController.swift */,
 				380177BF2831B4E1003D3504 /* Main.storyboard */,
+				3822A6D728A9C0F3002C1598 /* IncomeExpenseViewController.swift */,
+				3822A6D528A9BE5E002C1598 /* AccountDetailsViewController.swift */,
+				3822A6D328A9B51A002C1598 /* DevelopersViewController.swift */,
+				3822A6D128A9B4FF002C1598 /* ProfileViewController.swift */,
 				3869B152286E62C700A4C93B /* AccountTableViewCell.swift */,
+				3822A6D928A9E1E3002C1598 /* IncomeExpenseTableViewCell.swift */,
 				38F869AD286D483300863466 /* RootViewController.swift */,
 				380177BB2831B4E1003D3504 /* SceneDelegate.swift */,
 				3869B150286E395B00A4C93B /* SettingsViewController.swift */,
@@ -197,17 +212,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				38F869C3286D6D4700863466 /* SideMenuViewController.swift in Sources */,
+				3822A6D628A9BE5E002C1598 /* AccountDetailsViewController.swift in Sources */,
+				3822A6D428A9B51A002C1598 /* DevelopersViewController.swift in Sources */,
 				38F869CA286D6F6E00863466 /* SideMenuCell.swift in Sources */,
 				380177BA2831B4E1003D3504 /* AppDelegate.swift in Sources */,
 				38F869C1286D687B00863466 /* AddAccountViewController.swift in Sources */,
 				3869B14D286E37E100A4C93B /* CurrencyConverterViewController.swift in Sources */,
 				38F869AE286D483300863466 /* RootViewController.swift in Sources */,
 				3869B14F286E38C000A4C93B /* AboutViewController.swift in Sources */,
+				3822A6DA28A9E1E3002C1598 /* IncomeExpenseTableViewCell.swift in Sources */,
 				38F869C5286D6E5F00863466 /* SideMenuModel.swift in Sources */,
 				38F869B0286D497E00863466 /* SignUpViewController.swift in Sources */,
 				38F869BD286D4A9E00863466 /* LoginViewController.swift in Sources */,
+				3822A6D828A9C0F3002C1598 /* IncomeExpenseViewController.swift in Sources */,
 				3869B151286E395B00A4C93B /* SettingsViewController.swift in Sources */,
 				3869B154286E62C700A4C93B /* AccountTableViewCell.swift in Sources */,
+				3822A6D228A9B4FF002C1598 /* ProfileViewController.swift in Sources */,
 				380177BC2831B4E1003D3504 /* SceneDelegate.swift in Sources */,
 				38F869BF286D4B9E00863466 /* HomeScreenViewController.swift in Sources */,
 			);

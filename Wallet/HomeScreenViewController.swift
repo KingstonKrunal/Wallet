@@ -84,8 +84,17 @@ class HomeScreenViewController: UIViewController, UITableViewDelegate, UITableVi
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let event = events[indexPath.row]
+        
+        let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "accountDetailsVC") as! AccountDetailsViewController
+        
+        self.present(nextViewController, animated: true)
+    }
+    
     func fetchEvents() {
         let db = Firestore.firestore()
+        
         db.collection("accounts").addSnapshotListener { documentSnapshot, err in
                 if let err = err {
                     print("Error getting documents: \(err)")
@@ -96,15 +105,17 @@ class HomeScreenViewController: UIViewController, UITableViewDelegate, UITableVi
                     for document in documentSnapshot!.documents {
                         let account = document.data()
                         
-                        let aName = "\(account["account_name"] ?? "") \(account["account_type"] ?? "")"
-                        let cBalance = "$\(account["current_balance"] ?? "NIL")"
-                        
-                        print("here!!! \(account)")
-                        
-                        self.events.append(Event(
-                            accountName: aName,
-                            currentBalance: cBalance
-                        ))
+                        if Auth.auth().currentUser?.uid == account["added_by"] as? String {
+                            let aName = "\(account["account_name"] ?? "") \(account["account_type"] ?? "")"
+                            let cBalance = "$\(account["current_balance"] ?? "NIL")"
+                            
+                            print("here!!! \(account)")
+                            
+                            self.events.append(Event(
+                                accountName: aName,
+                                currentBalance: cBalance
+                            ))
+                        }
                     }
                     
                     self.accountsTV.reloadData()
@@ -136,11 +147,11 @@ class HomeScreenViewController: UIViewController, UITableViewDelegate, UITableVi
             self.present(nextViewController, animated: true)
         })
         
-        alert.addAction(UIAlertAction(title: "About",
-                                      style: .default) { _ in
-            let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "aboutVC") as! AboutViewController
-            self.present(nextViewController, animated: true)
-        })
+//        alert.addAction(UIAlertAction(title: "About",
+//                                      style: .default) { _ in
+//            let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "aboutVC") as! AboutViewController
+//            self.present(nextViewController, animated: true)
+//        })
 
         alert.addAction(UIAlertAction(title: "Logout",
                                       style: .destructive) { _ in

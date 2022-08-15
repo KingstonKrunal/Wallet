@@ -92,6 +92,7 @@ class SignUpViewController: UIViewController {
         if let uname = uNameTF.text, let mNumber = mobileNumberTF.text, let email = emailTF.text, let password = passwordTF.text {
             
             let auth = Auth.auth()
+            
             if auth.currentUser != nil {
                 //TODO: Query user data from firebase, if not exists create it.
             }
@@ -104,9 +105,11 @@ class SignUpViewController: UIViewController {
                 if authResult?.user != nil {
                     if let uid = authResult?.user.uid {
                         let db = Firestore.firestore()
+                        
                         db.collection("users").document(uid).setData([
                             "name": uname,
-                            "mobile_number": mNumber
+                            "mobile_number": mNumber,
+                            "user_id": uid
                         ]) { err in
                             if let err = err {
                                 print("Error adding document: \(err)")
